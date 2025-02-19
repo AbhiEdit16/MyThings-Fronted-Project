@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flower Shops</title>
+  <link rel="icon" href="p1.jpeg">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    /* Manage Section */
+    .manage-container {
+      background-color: #dde9e7;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 1200px;
+      margin: 30px 30px 100px 50px;
+      border: 0.1px solid darkgrey;
+      border-radius: 7px;
+      
+    }
+     .manage-container:hover{
+      box-shadow: 0 0 15px 5px darkgray;
+     }
+     .projects-section {
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+      .project {
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            
+      }
+        .project:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+ 
+
+.project img{
+	width: 300px;
+	height: 200px;
+	object-fit: cover;
+	object-position: center;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Manage Profile Section -->
+  <h2 style="text-align: center; font-family:'Courier New', Courier, monospace;">Bakery & Confectionery Near You...</h2>
+  <div class="manage-container">
+      <div class="gallery">
+          <div class="project">
+            <img src="img/bkr1.jpeg" alt="shop_img">
+              <p>Karnatak Bakery</p>
+              <p>Location : Main Circle Opposite</p>
+              <p onclick="location.href='#'">Google Maps</p>
+          </div>
+          <div class="project">
+            <img src="img/bkr2.jpeg" alt="shop_img">
+              <p>MDC Bakery</p>
+              <p>Location : Near Railway Station</p>
+              <p onclick="location.href='#'">Google Maps</p>
+          </div>
+          <div class="project">
+            <img src="img/bkr3.jpeg" alt="shop_img">
+              <p>Modern Bakery</p>
+              <p>Location : Right Side of Post Office</p>
+              <p onclick="location.href='#'">Google Maps</p>
+          </div>
+          <div class="project">
+            <img src="img/bkr4.jpeg" alt="shop_img">
+              <p>Mahalaxmi Bakery</p>
+              <p>Location : 32 Ways Opposite </p>
+              <p onclick="location.href='#'">Google Maps</p>
+          </div>
+      </div>
+
+  </div>
+</body>
+</html>

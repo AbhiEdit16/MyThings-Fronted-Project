@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5f5;
+            padding: 50px;
+        }
+        .profile-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: auto;
+        }
+        .profile-pic img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        #uploadBtn {
+            margin-top: 10px;
+            padding: 5px;
+            cursor: pointer;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #editBtn { background-color: #3498db; color: white; }
+        #saveBtn { background-color: #2ecc71; color: white; display: none; }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-pic">
+            <img id="profileImage" src="default-avatar.png" alt="Profile Picture">
+            <input type="file" id="fileInput" accept="image/*" hidden>
+            <button id="uploadBtn">Change Photo</button>
+        </div>
+        <div class="profile-info">
+            <input type="text" id="name" value="Your Name" disabled>
+            <textarea id="about" disabled>Your about description...</textarea>
+        </div>
+        <button id="editBtn">Edit Profile</button>
+        <button id="saveBtn">Save</button>
+    </div>
+
+    <script>
+        document.getElementById("editBtn").addEventListener("click", function() {
+            document.getElementById("name").disabled = false;
+            document.getElementById("about").disabled = false;
+            document.getElementById("editBtn").style.display = "none";
+            document.getElementById("saveBtn").style.display = "block";
+        });
+
+        document.getElementById("saveBtn").addEventListener("click", function() {
+            document.getElementById("name").disabled = true;
+            document.getElementById("about").disabled = true;
+            document.getElementById("editBtn").style.display = "block";
+            document.getElementById("saveBtn").style.display = "none";
+            alert("Profile Updated!");
+        });
+
+        document.getElementById("uploadBtn").addEventListener("click", function() {
+            document.getElementById("fileInput").click();
+        });
+
+        document.getElementById("fileInput").addEventListener("change", function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById("profileImage").src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>

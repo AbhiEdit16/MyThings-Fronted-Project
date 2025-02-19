@@ -1,0 +1,263 @@
+/* style.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure footer sticks to bottom */
+    background-color: #f4f4f4; /* Light background */
+    color: #333; /* Dark text for contrast */
+    animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 3;
+        transform: translateY(0);
+    }
+}
+header {
+    background-color: #007bff; /* Blue header */
+    color: white;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between; /* Align logo and welcome text */
+    align-items: center;
+    padding: 160px 10px;
+    background-image: url('p9.jpeg');
+    background-size: cover;
+	background-position: center;
+	position: relative;
+}
+
+
+
+.welcome {
+    font-size: 1.4rem;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+main {
+    display: flex;
+    flex-grow: 1; /* Allow main to take up available space */
+    padding: 20px;
+    
+}
+
+
+.right-panel {
+    width: 200px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 0.1px solid darkgrey;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 20px; /* Space between main content and right panel */
+}
+.right-panel:hover{
+    box-shadow: 0 0 15px 5px darkgray;
+}
+
+.options {
+    display: flex;
+    gap: 5px;
+    flex-direction: column; /* Vertical alignment */
+}
+
+.panel-item {
+    padding: 22px;
+    margin-bottom: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.panel-item:hover {
+    background-color: #ddd;
+}
+
+
+.search-area {
+    flex-grow: 1; /* Allow search area to expand */
+    background-color:#dff0ed;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    border: 0.1px solid darkgrey;
+   
+}
+.search-area:hover{
+    box-shadow: 0 0 15px 5px darkgray;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-left: 200px;
+    
+}
+
+.search-box select, .search-box button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+    text-align: center;
+}
+
+.search-box button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-box button:hover {
+    background-color: #0056b3;
+}
+#results {
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 0;
+    text-align: center; /* Center footer content */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around; /* Distribute sections evenly */
+    align-items: center; /* Vertically align items */
+    padding: 0.1px;
+}
+
+.footer-section {
+    display: flex;
+    gap: 100px; /* Space between links/text in section */
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Dark mode */
+body.dark-mode {
+    background: #222;
+    color: #fff;
+}
+
+
+/* Settings box */
+.settings-box {
+    top: 350px;
+    right: 285px;
+    width: 200px;
+    background: #f1eaea;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    display: none;
+    border-radius: 5px;
+    transition: opacity 0.3s;
+    animation: fadeIn 0.8s ease-in-out;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Dark mode settings box */
+body.dark-mode .settings-box {
+    background: #333;
+    color: white;
+}
+
+/* Settings options */
+.settings-option {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+body.dark-mode .settings-option {
+    border-bottom: 1px solid #555;
+}
+
+.settings-option:last-child {
+    border-bottom: none;
+}
+
+/* Sub-menu */
+.submenu {
+    display: none;
+    padding-left: 10px;
+    border-left: 2px solid #007bff;
+}
+
+/* Toggle switch */
+.switch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    width: 40px;
+    height: 20px;
+    background: #ccc;
+    border-radius: 10px;
+    position: relative;
+    transition: background 0.3s;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: 0.3s;
+}
+
+.switch input:checked + .slider {
+    background: #007bff;
+}
+
+.switch input:checked + .slider:before {
+    transform: translateX(20px);
+}
+

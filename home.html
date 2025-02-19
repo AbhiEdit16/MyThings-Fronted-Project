@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyThings</title>
+    <link rel="icon" href="p1.jpeg">
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+      
+    </header>
+        <div class="welcome">Welcome! Find your needs.</div>
+    <main>
+        
+
+        <section class="search-area">
+            <h2 style=" margin-left: 250px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">FIND A SHOP</h2>
+            <div class="search-box">
+                  
+                  <select class="city" id="city">
+                    <option value="">City</option>
+                    <option value="bangalore">Bangalore</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="Belgavi">Belgavi</option>
+                    <option value="chikodi">Chikodi</option>
+                    <option value="Sangli">Sangli</option>
+                    <option value="Ugar">Ugar Khurd</option>
+                    <option value="dharwad">Dharwad</option>
+                    </select>
+            </div>
+            <div class="search-box">
+                <select class="category" id="category">
+                    <option value="">category</option>
+                    <option value="Grocery">Grocery</option>
+                    <option value="Clothing">Clothing & Apparel</option>
+                    <option value="Footwear">Footwear</option>
+                    <option value="Electronics">Electronics & Appliances</option>
+                    <option value="Moblie">Mobile & Accessories</option>
+                    <option value="Jewelry">Jewelry</option>
+                    <option value="Furniture">Furniture & Home Decor</option>
+                    <option value="Medical">Medical & Pharmacy</option>
+                    <option value="Automonile">Automobiles & Spare Parts</option>
+                    <option value="Toy">Toy</option>
+                    <option value="Cosmetic">Cosmetic & Beauty</option>
+                    <option value="Bakery">Bakery & Confectionery</option>
+                    <option value="Meat">Meat & Fish</option>
+                    <option value="Dairy">Dairy & Milk Products</option>
+                    <option value="Fruits">Dry Fruits</option>
+                    <option value="Paan">Paan </option>
+                    <option value="tea">Tea & Coffee</option>
+                    <option value="Gift">Handicraft & Gift</option>
+                    <option value="Flower">Flower</option>
+                    </select>
+            </div>
+            <div class="search-box">
+                <select class="type" id="type">
+                    <option value="">Type</option>
+                    <option value="small">Small Shop</option>
+                    <option value="big">Big Shop</option>
+                    <option value="Super">Super Market</option>
+                    <option value="Bazzar">Big Bazzar</option>
+                </select>
+            </div>
+             <div class="search-box">
+                <button onclick="search()">Search</button>
+            </div>
+            <div id="results">
+                </div>
+
+        </section>
+        
+        <aside class="right-panel">
+            <div class="options">
+                <a href="profile.html" class="panel-item">Profile</a>
+                <a href="addshop.html" class="panel-item">Add Shop</a>
+                <a href="#" class="panel-item" onclick="toggleSettings()">Settings</a>
+                <div class="settings-box" id="settingsBox">
+                    <div class="settings-option" onclick="toggleSubMenu('themeMenu')">Theme &#9662;</div>
+                    <div id="themeMenu" class="submenu">
+                        <label class="switch">
+                            Dark Mode
+                            <input type="checkbox" id="darkModeToggle">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+            
+                    <div class="settings-option" onclick="toggleSubMenu('privacyMenu')">Privacy &#9662;</div>
+                    <div id="privacyMenu" class="submenu">
+                        <p>Manage your privacy settings here.</p>
+                    </div>
+            
+                    <div class="settings-option" onclick="toggleSubMenu('moreMenu')">More &#9662;</div>
+                    <div id="moreMenu" class="submenu">
+                        <p>Other settings and information.</p>
+                    </div>
+                </div>
+                <a href="login.html" class="panel-item">Logout</a>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <a href="#">Terms & Conditions</a>
+               
+                <a href="#">Resources</a>
+                
+                <span>Copyright &copy; 2023</span>
+               
+                <span>Country: India</span>
+                
+                <a href="#">Feedback</a>
+               
+            </div>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+</html>
